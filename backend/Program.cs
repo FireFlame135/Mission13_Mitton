@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173", "http://localhost:5174")
+            policy.AllowAnyOrigin() // Changed this line so Azure can connect
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
