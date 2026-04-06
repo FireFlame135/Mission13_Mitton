@@ -26,7 +26,7 @@ Users can browse books, filter by category, adjust page size, sort by title, add
 
 ## API Endpoints
 Base URL (dev):
-- `http://localhost:5145`
+- `https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net/`
 - `https://localhost:7145`
 
 Books:
@@ -40,7 +40,7 @@ Books:
 	- Returns distinct, alphabetized categories.
 
 Swagger (Development):
-- `http://localhost:5145/swagger`
+- `https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//swagger`
 - `https://localhost:7145/swagger`
 
 ## Getting Started

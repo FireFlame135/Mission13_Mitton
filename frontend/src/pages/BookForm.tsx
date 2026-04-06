@@ -20,7 +20,7 @@ const BookForm = () => {
 
   useEffect(() => {
     if (isEditing) {
-      fetch(`http://localhost:5145/api/Books/${id}`)
+      fetch(`https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books/${id}`)
         .then((res) => res.json())
         .then((data) => setBook(data));
     }
@@ -38,8 +38,8 @@ const BookForm = () => {
     e.preventDefault();
     
     const url = isEditing 
-      ? `http://localhost:5145/api/Books/${id}` 
-      : 'http://localhost:5145/api/Books';
+      ? `https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books/${id}` 
+      : 'https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books';
       
     await fetch(url, {
       method: isEditing ? 'PUT' : 'POST',

@@ -7,7 +7,7 @@ const AdminBooks = () => {
 
   const fetchBooks = async () => {
     // Fetching with a large page size just to get all books for the admin table
-    const response = await fetch('http://localhost:5145/api/Books?pageSize=1000');
+    const response = await fetch('https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books?pageSize=1000');
     const data = await response.json();
     setBooks(data.books);
   };
@@ -18,7 +18,7 @@ const AdminBooks = () => {
 
   const handleDelete = async (id: number) => {
     if (window.confirm('Are you sure you want to delete this book?')) {
-      await fetch(`http://localhost:5145/api/Books/${id}`, {
+      await fetch(`https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books/${id}`, {
         method: 'DELETE',
       });
       fetchBooks(); // Refresh the list after deleting

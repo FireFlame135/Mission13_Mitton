@@ -38,7 +38,7 @@ const BookList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       // REPLACE YOUR_BACKEND_PORT
-      const response = await fetch('http://localhost:5145/api/Books/Categories');
+      const response = await fetch('https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books/Categories');
       const cats = await response.json();
       setCategories(cats);
     };
@@ -49,7 +49,7 @@ const BookList = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       // REPLACE YOUR_BACKEND_PORT
-      let url = `http://localhost:5145/api/Books?page=${page}&pageSize=${pageSize}&sortOrder=${sortOrder}`;
+      let url = `https://tylermitton-is413-bookstore-fadmb9grd9hbc0fd.francecentral-01.azurewebsites.net//api/Books?page=${page}&pageSize=${pageSize}&sortOrder=${sortOrder}`;
       if (selectedCategory) {
         url += `&category=${encodeURIComponent(selectedCategory)}`;
       }
